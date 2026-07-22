@@ -188,7 +188,7 @@ qs("#cart-checkout").addEventListener("click", async event => {
   if (!items.length) return;
   button.disabled = true; button.textContent = "Opening secure checkout…";
   try {
-    const response = await fetch("/.netlify/functions/create-square-checkout", {
+    const response = await fetch("/api/create-square-checkout", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ items })
