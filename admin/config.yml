@@ -28,7 +28,10 @@ collections:
       - { label: "Product name", name: "name", widget: "string" }
       - { label: "Product type", name: "type", widget: "string", hint: "Small label above the product name." }
       - { label: "Categories", name: "category", widget: "string", hint: "Use searchable words separated by spaces, such as: cards organization" }
-      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Displayed price", name: "price", widget: "string", hint: "What visitors see, such as $10 or From $10." }
+      - { label: "Sell online", name: "online_purchase", widget: "boolean", default: false, hint: "Turn this on only when the product has a fixed checkout price." }
+      - { label: "Online price (CAD)", name: "price_cad", widget: "number", value_type: "float", min: 0, required: false, hint: "Example: enter 10 for $10.00. Used by Square checkout." }
+      - { label: "Stock quantity", name: "stock", widget: "number", value_type: "int", min: 0, required: false, hint: "Leave blank for made-to-order/unlimited." }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Product image", name: "image", widget: "image", required: false }
       - { label: "Image description", name: "image_alt", widget: "string", required: false }
