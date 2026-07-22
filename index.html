@@ -1,284 +1,233 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="D3DPS creates practical, made-to-order 3D printed products, Pokémon GO accessories, organizers, gaming gear, and custom prints in Calgary, Alberta.">
-  <meta name="theme-color" content="#08080d">
-  <meta property="og:title" content="D3DPS | 3D Printed Products in Calgary">
-  <meta property="og:description" content="Practical 3D printed products built for everyday life. Designed and printed in Calgary.">
-  <meta property="og:image" content="assets/d3dps-logo-512.png">
-  <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="assets/favicon-180.png">
-  <link rel="stylesheet" href="styles.css">
-  <title>D3DPS | 3D Printed Products in Calgary</title>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"D3DPS","description":"Made-to-order 3D printed products and custom printing in Calgary, Alberta.","email":"D3DPSYYC@gmail.com","areaServed":"Calgary, Alberta","foundingDate":"2022","sameAs":["https://www.facebook.com/share/1Rhco5eney/","https://www.instagram.com/d3dps","https://www.tiktok.com/@d3dps","https://youtube.com/@d3dps"]}</script>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="D3DPS creates practical, made-to-order 3D printed products, Pokémon GO accessories, organizers, gaming gear, and custom prints in Calgary, Alberta." name="description"/>
+<meta content="#08080d" name="theme-color"/>
+<meta content="D3DPS | 3D Printed Products in Calgary" property="og:title"/>
+<meta content="Practical 3D printed products built for everyday life. Designed and printed in Calgary." property="og:description"/>
+<meta content="assets/d3dps-logo-512.png" property="og:image"/>
+<link href="assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/favicon-180.png" rel="apple-touch-icon"/>
+<link href="styles.css" rel="stylesheet"/>
+<title>D3DPS | 3D Printed Products in Calgary</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"D3DPS","description":"Made-to-order 3D printed products and custom printing in Calgary, Alberta.","email":"D3DPSYYC@gmail.com","areaServed":"Calgary, Alberta","foundingDate":"2022","sameAs":["https://www.facebook.com/share/1Rhco5eney/","https://www.instagram.com/d3dps","https://www.tiktok.com/@d3dps","https://youtube.com/@d3dps"]}</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="announcement-bar">
-    <div class="shell announcement-inner">
-      <span>◆ Designed &amp; made in Calgary, AB</span>
-      <span>◆ Local pickup available</span>
-      <span>◆ Made to order · Usually 1–3 business days</span>
-      <div class="social-mini" aria-label="Social links">
-        <a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-        <a href="https://www.instagram.com/d3dps" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-        <a href="https://www.tiktok.com/@d3dps" target="_blank" rel="noopener" aria-label="TikTok">♪</a>
-        <a href="https://youtube.com/@d3dps" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
-        <a href="mailto:D3DPSYYC@gmail.com" aria-label="Email">✉</a>
-      </div>
-    </div>
-  </div>
-
-  <header class="site-header" id="top">
-    <div class="shell header-grid">
-      <a href="#top" class="brand" aria-label="D3DPS home">
-        <img src="assets/d3dps-logo.webp" alt="D3DPS — Est. 2022 — 3D Printed Products">
-      </a>
-
-      <div class="header-tools">
-        <label class="site-search">
-          <span class="sr-only">Search products</span>
-          <input id="header-search" type="search" placeholder="Search products…">
-          <span aria-hidden="true">⌕</span>
-        </label>
-        <button class="inquiry-button" id="cart-toggle" type="button" aria-controls="cart-panel" aria-expanded="false">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement-bar">
+<div class="shell announcement-inner">
+<span>◆ Designed &amp; made in Calgary, AB</span>
+<span>◆ Local pickup available</span>
+<span>◆ Made to order · Usually 1–3 business days</span>
+<div aria-label="Social links" class="social-mini">
+<a aria-label="Facebook" href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" rel="noopener" target="_blank">f</a>
+<a aria-label="Instagram" href="https://www.instagram.com/d3dps" rel="noopener" target="_blank">◎</a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@d3dps" rel="noopener" target="_blank">♪</a>
+<a aria-label="YouTube" href="https://youtube.com/@d3dps" rel="noopener" target="_blank">▶</a>
+<a aria-label="Email" href="mailto:D3DPSYYC@gmail.com">✉</a>
+</div>
+</div>
+</div>
+<header class="site-header" id="top">
+<div class="shell header-grid">
+<a aria-label="D3DPS home" class="brand" href="#top">
+<img alt="D3DPS — Est. 2022 — 3D Printed Products" src="assets/d3dps-logo.webp"/>
+</a>
+<div class="header-tools">
+<label class="site-search">
+<span class="sr-only">Search products</span>
+<input id="header-search" placeholder="Search products…" type="search"/>
+<span aria-hidden="true">⌕</span>
+</label>
+<button aria-controls="cart-panel" aria-expanded="false" class="inquiry-button" id="cart-toggle" type="button">
           Inquiry list <strong id="cart-count">0</strong>
-        </button>
-        <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch colour theme">◐</button>
-        <button class="menu-button" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menu</button>
-      </div>
-
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a class="active" href="#top">Home</a>
-        <a href="#products">Products</a>
-        <a href="#custom">Custom Orders</a>
-        <a href="#process">How It Works</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <aside id="cart-panel" class="cart-panel" aria-hidden="true" aria-label="Product inquiry list">
-    <div class="cart-head">
-      <div><p class="kicker">Quote builder</p><h2>Your inquiry list</h2></div>
-      <button id="cart-close" class="close-button" type="button" aria-label="Close inquiry list">×</button>
-    </div>
-    <p>Save multiple products here and send one combined quote request. No payment is taken online.</p>
-    <div id="cart-items" class="cart-items"></div>
-    <button id="cart-email" class="button primary full" type="button">Email this list</button>
-    <button id="cart-clear" class="text-button" type="button">Clear list</button>
-  </aside>
-  <div id="cart-scrim" class="cart-scrim" hidden></div>
-
-  <main id="main">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Practical prints. Real-life use.</p>
-          <h1>3D Printed Products <span>Built for Everyday Life.</span></h1>
-          <p class="hero-text">Functional designs for Pokémon GO, gaming, organization, travel, collecting, and custom creations—designed and printed in Calgary with care and precision.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#products">Shop Products <span>→</span></a>
-            <a class="button ghost" href="#contact">Request a Custom Print <span>→</span></a>
-          </div>
-          <div class="benefit-row">
-            <div><b>⌖</b><span><strong>Made in Calgary</strong><small>Local &amp; proud</small></span></div>
-            <div><b>◇</b><span><strong>Durable materials</strong><small>PLA &amp; PETG</small></span></div>
-            <div><b>▣</b><span><strong>Fast turnaround</strong><small>Usually 1–3 days</small></span></div>
-            <div><b>✓</b><span><strong>Made to order</strong><small>Built for you</small></span></div>
-          </div>
-        </div>
-        <div class="hero-media reveal">
-          <img src="assets/hero-dual-phone-holder.webp" alt="A real D3DPS dual phone holder carrying two phones while playing Pokémon GO">
-          <div class="hero-shade"></div>
-          <div class="hero-label"><span>Featured product</span><strong>Dual Phone Holder</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="category-strip section-tight" aria-labelledby="category-title">
-      <div class="shell">
-        <div class="section-top">
-          <div><p class="eyebrow">Browse the collection</p><h2 id="category-title">Shop by category</h2></div>
-          <a href="#products">View all products →</a>
-        </div>
-        <div class="category-grid">
-          <a class="category-card" href="#products" data-jump-filter="pokemon-go"><span class="category-icon">◉</span><span><strong>Pokémon GO</strong><small>Phone holders &amp; accessories</small></span><b>→</b></a>
-          <a class="category-card" href="#products" data-jump-filter="organization"><span class="category-icon">▦</span><span><strong>Organization</strong><small>Storage, trays &amp; displays</small></span><b>→</b></a>
-          <a class="category-card" href="#products" data-jump-filter="gaming"><span class="category-icon">⌘</span><span><strong>Gaming</strong><small>Controller &amp; desk gear</small></span><b>→</b></a>
-          <a class="category-card" href="#products" data-jump-filter="cards"><span class="category-icon">▤</span><span><strong>Card Collecting</strong><small>Sorting, slabs &amp; packs</small></span><b>→</b></a>
-          <a class="category-card" href="#custom"><span class="category-icon">＋</span><span><strong>Custom Prints</strong><small>Your idea, made real</small></span><b>→</b></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="products" class="section products-section">
-      <div class="shell">
-        <div class="section-top products-heading">
-          <div><p class="eyebrow">Featured products</p><h2>Useful prints people actually want to use.</h2></div>
-          <p>Search, filter, save favourites, or build an inquiry list. Product images can be swapped later without changing the layout.</p>
-        </div>
-
-        <div class="catalog-tools">
-          <label class="catalog-search"><span>Search products</span><input id="product-search" type="search" placeholder="Try “phone”, “cards”, or “gaming”"></label>
-          <div class="filters" role="group" aria-label="Product categories">
-            <button class="filter active" type="button" data-filter="all">All</button>
-            <button class="filter" type="button" data-filter="pokemon-go">Pokémon GO</button>
-            <button class="filter" type="button" data-filter="cards">Cards</button>
-            <button class="filter" type="button" data-filter="gaming">Gaming</button>
-            <button class="filter" type="button" data-filter="organization">Organization</button>
-            <button class="filter" type="button" data-filter="custom">Custom</button>
-            <button class="filter" type="button" data-filter="favorites">Favourites</button>
-          </div>
-        </div>
-
-        <div class="product-grid" id="product-grid">
-          <article class="product-card featured" data-id="dual-phone-holder" data-name="Dual Phone Holder" data-category="pokemon-go gaming" data-price="From $10">
-            <div class="product-media has-photo"><img src="assets/products/dual-phone-holder.webp" alt="D3DPS dual phone holder in use"><span class="badge">Featured</span><button class="favorite-button" type="button" aria-label="Save Dual Phone Holder">♡</button></div>
-            <div class="product-body"><p class="product-type">Pokémon GO accessory</p><h3>Dual Phone Holder</h3><p>Hold two phones side by side in one hand for raids, events, spotlight hours, and daily play.</p><div class="product-bottom"><strong>From $10</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="booster-pack-dispenser" data-name="Booster Pack Dispenser" data-category="cards organization" data-price="Custom quote">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>booster-pack-dispenser.webp</code></small><button class="favorite-button" type="button" aria-label="Save Booster Pack Dispenser">♡</button></div>
-            <div class="product-body"><p class="product-type">Card collecting</p><h3>Booster Pack Dispenser</h3><p>A stackable display and storage solution that keeps sealed packs organized and easy to access.</p><div class="product-bottom"><strong>Custom quote</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="card-sorting-tray" data-name="Card Sorting Tray" data-category="cards organization" data-price="Multiple sizes">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>card-sorting-tray.webp</code></small><button class="favorite-button" type="button" aria-label="Save Card Sorting Tray">♡</button></div>
-            <div class="product-body"><p class="product-type">Organization</p><h3>Card Sorting Tray</h3><p>Sort cards quickly while opening packs, organizing collections, or preparing bulk orders.</p><div class="product-bottom"><strong>Multiple sizes</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="slab-stand" data-name="PSA Slab Guard & Stand" data-category="cards organization" data-price="$6 each · $10 set">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>slab-guard-stand.webp</code></small><button class="favorite-button" type="button" aria-label="Save PSA Slab Guard and Stand">♡</button></div>
-            <div class="product-body"><p class="product-type">Card display</p><h3>PSA Slab Guard &amp; Stand</h3><p>Protect and display graded cards with a clean, coordinated guard-and-stand setup.</p><div class="product-bottom"><strong>$6 each · $10 set</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="controller-station" data-name="Universal Controller Station" data-category="gaming organization" data-price="Custom quote">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>controller-station.webp</code></small><button class="favorite-button" type="button" aria-label="Save Universal Controller Station">♡</button></div>
-            <div class="product-body"><p class="product-type">Gaming accessory</p><h3>Universal Controller Station</h3><p>Keep controllers displayed, organized, and within reach with multiple styles available.</p><div class="product-bottom"><strong>Custom quote</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="toploader-dispenser" data-name="Toploader & Sleeve Dispenser" data-category="cards organization" data-price="Multiple styles">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>toploader-dispenser.webp</code></small><button class="favorite-button" type="button" aria-label="Save Toploader and Sleeve Dispenser">♡</button></div>
-            <div class="product-body"><p class="product-type">Card workspace</p><h3>Toploader &amp; Sleeve Dispenser</h3><p>Keep card-protection supplies easy to grab in Standard, Brickwork, Diamonds, or Nova styles.</p><div class="product-bottom"><strong>Multiple styles</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="rugged-box" data-name="Rugged Storage Box" data-category="organization custom" data-price="Custom quote">
-            <div class="product-media placeholder"><span class="placeholder-mark">＋</span><small>Add product photo<br><code>rugged-storage-box.webp</code></small><button class="favorite-button" type="button" aria-label="Save Rugged Storage Box">♡</button></div>
-            <div class="product-body"><p class="product-type">Storage</p><h3>Rugged Storage Box</h3><p>Durable printed boxes with secure latches, hardware, and sizing tailored to what you carry.</p><div class="product-bottom"><strong>Custom quote</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-
-          <article class="product-card" data-id="custom-print" data-name="Custom 3D Print" data-category="custom" data-price="Custom quote">
-            <div class="product-media placeholder custom-placeholder"><span class="placeholder-mark">＋</span><small>Your future custom project photo</small><button class="favorite-button" type="button" aria-label="Save Custom 3D Print">♡</button></div>
-            <div class="product-body"><p class="product-type">Your idea</p><h3>Something Custom</h3><p>Need a holder, organizer, mount, replacement part, personalized item, or small business batch?</p><div class="product-bottom"><strong>Let’s design it</strong><button class="add-button" type="button">Add to inquiry</button></div></div>
-          </article>
-        </div>
-        <p id="no-results" class="no-results" hidden>No products match that search yet. A custom print may still be possible.</p>
-      </div>
-    </section>
-
-    <section class="section media-section">
-      <div class="shell">
-        <div class="section-top">
-          <div><p class="eyebrow">Your photo gallery</p><h2>Built to showcase your best work.</h2></div>
-          <p>These are intentional photo slots. Replace each placeholder later with the exact images you choose.</p>
-        </div>
-        <div class="masonry-grid">
-          <div class="photo-slot tall"><span>Hero product lifestyle photo</span><small>Suggested: portrait or vertical image</small></div>
-          <div class="photo-slot"><span>Best seller close-up</span><small>Suggested: clean product photo</small></div>
-          <div class="photo-slot"><span>Colour options</span><small>Suggested: several prints together</small></div>
-          <div class="photo-slot wide"><span>Workspace or printing process</span><small>Suggested: printer, filament, or workbench</small></div>
-          <div class="photo-slot"><span>Customer setup</span><small>Suggested: product being used</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="custom" class="section custom-section">
-      <div class="shell custom-grid">
-        <div class="custom-copy">
-          <p class="eyebrow">Custom 3D printing</p>
-          <h2>Bring the idea. We’ll work out the print.</h2>
-          <p>Send a photo, sketch, measurement, existing STL, or a simple explanation. D3DPS can adapt an existing model or develop a practical solution around your use case.</p>
-          <ul class="check-list"><li>Colour and size adjustments</li><li>Personalized names or labels</li><li>Replacement parts and organizers</li><li>Small-batch business orders</li><li>PLA and PETG material options</li><li>One small design revision included</li></ul>
-          <a class="button primary" href="#contact">Request a Custom Quote →</a>
-        </div>
-        <div class="custom-visual">
-          <div class="custom-photo-slot"><span>＋</span><strong>Add a custom-project photo</strong><small>Use a before/after, prototype, or customer idea</small></div>
-          <div class="custom-card"><p class="kicker">Not sure it can be printed?</p><h3>Send the idea anyway.</h3><p>The first step is understanding the size, purpose, strength, material, timeline, and best way to make it.</p><div class="chip-row"><span>STL</span><span>3MF</span><span>STEP</span><span>Photos</span><span>Sketches</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section process-section">
-      <div class="shell">
-        <div class="section-top"><div><p class="eyebrow">How ordering works</p><h2>Simple from idea to pickup.</h2></div></div>
-        <div class="steps-grid">
-          <article><span>01</span><h3>Send your idea</h3><p>Share what you want, how it will be used, and any sizing details or photos.</p></article>
-          <article><span>02</span><h3>Approve the plan</h3><p>Confirm the design, colour, material, estimated timeline, and price.</p></article>
-          <article><span>03</span><h3>We print it</h3><p>Your item is made to order and checked before it leaves the printer.</p></article>
-          <article><span>04</span><h3>Pickup or delivery</h3><p>Arrange Calgary pickup, delivery, or shipping when available.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section about-section">
-      <div class="shell about-grid">
-        <div class="about-logo"><img src="assets/d3dps-logo.webp" alt="D3DPS logo"></div>
-        <div><p class="eyebrow">About D3DPS</p><h2>Practical products without the mass-produced feel.</h2><p>Established in 2022, D3DPS is a Calgary-based 3D printing business focused on useful, affordable products. Every order receives small-business attention, whether it is one accessory, a personalized gift, a storage solution, or a larger batch.</p><p>The goal is simple: make useful things that solve everyday problems and look good doing it.</p><div class="social-row"><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/d3dps" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@d3dps" target="_blank" rel="noopener">TikTok</a><a href="https://youtube.com/@d3dps" target="_blank" rel="noopener">YouTube</a></div></div>
-      </div>
-    </section>
-
-    <section class="section reviews-section">
-      <div class="shell">
-        <div class="section-top"><div><p class="eyebrow">Customer feedback</p><h2>Ready for real reviews.</h2></div><p>No fake testimonials have been added. Replace these placeholders with genuine customer feedback whenever you are ready.</p></div>
-        <div class="reviews-grid"><article><span>★★★★★</span><p>“Add a real customer review here.”</p><small>Customer name · Product</small></article><article><span>★★★★★</span><p>“Add another verified review here.”</p><small>Customer name · Custom order</small></article><article><span>★★★★★</span><p>“Use feedback from Facebook, Etsy, or a local order.”</p><small>Customer name · Calgary</small></article></div>
-      </div>
-    </section>
-
-    <section id="faq" class="section faq-section">
-      <div class="shell faq-grid">
-        <div><p class="eyebrow">Frequently asked questions</p><h2>Everything customers usually ask first.</h2><p>Clear answers help people feel confident before they reach out.</p></div>
-        <div class="faq-list">
-          <details><summary>How long does an order take?</summary><p>Most regular orders are ready in approximately 1–3 business days. Larger batches, new custom designs, and long prints may take around five business days or longer depending on complexity.</p></details>
-          <details><summary>What materials do you print with?</summary><p>Most items are printed in PLA. PETG can be recommended for products needing more heat resistance or durability.</p></details>
-          <details><summary>Can I choose the colour?</summary><p>Yes, subject to available filament. Multiple colours or special finishes may affect price and production time.</p></details>
-          <details><summary>Can you design something from scratch?</summary><p>Possibly. Send measurements, photos, sketches, and a clear description. Design and prototyping work may have an additional cost.</p></details>
-          <details><summary>Do you ship?</summary><p>Local Calgary pickup is the simplest option. Delivery or shipping can be discussed, with any added cost confirmed before production.</p></details>
-          <details><summary>Can I return a custom item?</summary><p>Because items are made to order, returns are generally not accepted. Production errors should be reported so they can be addressed.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="shell contact-grid">
-        <div class="contact-copy"><p class="eyebrow">Get a quote</p><h2>Tell us what you want printed.</h2><p>Include the item, approximate size, preferred colour, quantity, intended use, and any photos or files you already have.</p><div class="contact-links"><a href="mailto:D3DPSYYC@gmail.com"><span>Email</span><strong>D3DPSYYC@gmail.com</strong></a><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" target="_blank" rel="noopener"><span>Messenger</span><strong>Message D3DPS</strong></a><a href="https://www.instagram.com/d3dps" target="_blank" rel="noopener"><span>Instagram</span><strong>@d3dps</strong></a></div></div>
-        <form id="quote-form" class="contact-form">
-          <div class="field-row"><label>Name<input id="name" name="name" required autocomplete="name"></label><label>Email or phone<input id="contact-info" name="contact" required></label></div>
-          <label>Product or category<select id="quote-category" name="category"><option>Custom print</option><option>Pokémon GO accessory</option><option>Card collecting product</option><option>Gaming or desk accessory</option><option>Organization or travel item</option><option>Small-batch order</option></select></label>
-          <label>Project details<textarea id="details" name="details" rows="6" required placeholder="Describe the item, size, colour, quantity, and intended use."></textarea></label>
-          <button class="button primary full" type="submit">Create Email Request →</button>
-          <p class="form-note">This opens your email app with the details filled in. Attach photos or files before sending.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <a class="floating-contact" href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" target="_blank" rel="noopener">Message D3DPS</a>
-
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div class="footer-brand"><img src="assets/d3dps-logo.webp" alt="D3DPS"><p>Practical 3D printing, designed and made in Calgary.</p></div>
-      <div><strong>Explore</strong><a href="#products">Products</a><a href="#custom">Custom orders</a><a href="#process">How it works</a><a href="#faq">FAQ</a></div>
-      <div><strong>Connect</strong><a href="mailto:D3DPSYYC@gmail.com">D3DPSYYC@gmail.com</a><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/d3dps" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@d3dps" target="_blank" rel="noopener">TikTok</a><a href="https://youtube.com/@d3dps" target="_blank" rel="noopener">YouTube</a></div>
-    </div>
-    <div class="shell footer-bottom"><span>© <span id="year"></span> D3DPS</span><span>Established 2022 · Calgary, Alberta</span></div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+</button>
+<button aria-label="Switch colour theme" class="theme-button" id="theme-toggle" type="button">◐</button>
+<button aria-controls="main-nav" aria-expanded="false" class="menu-button" id="menu-toggle" type="button">Menu</button>
+</div>
+<nav aria-label="Main navigation" class="main-nav" id="main-nav">
+<a class="active" href="#top">Home</a>
+<a href="#products">Products</a>
+<a href="#custom">Custom Orders</a>
+<a href="#process">How It Works</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<aside aria-hidden="true" aria-label="Product inquiry list" class="cart-panel" id="cart-panel">
+<div class="cart-head">
+<div><p class="kicker">Quote builder</p><h2>Your inquiry list</h2></div>
+<button aria-label="Close inquiry list" class="close-button" id="cart-close" type="button">×</button>
+</div>
+<p>Save multiple products here and send one combined quote request. No payment is taken online.</p>
+<div class="cart-items" id="cart-items"></div>
+<button class="button primary full" id="cart-email" type="button">Email this list</button>
+<button class="text-button" id="cart-clear" type="button">Clear list</button>
+</aside>
+<div class="cart-scrim" hidden="" id="cart-scrim"></div>
+<main id="main">
+<section class="hero">
+<div class="shell hero-grid">
+<div class="hero-copy reveal">
+<p class="eyebrow">Practical prints. Real-life use.</p>
+<h1>3D Printed Products <span>Built for Everyday Life.</span></h1>
+<p class="hero-text">Functional designs for Pokémon GO, gaming, organization, travel, collecting, and custom creations—designed and printed in Calgary with care and precision.</p>
+<div class="hero-actions">
+<a class="button primary" href="#products">Shop Products <span>→</span></a>
+<a class="button ghost" href="#contact">Request a Custom Print <span>→</span></a>
+</div>
+<div class="benefit-row">
+<div><b>⌖</b><span><strong>Made in Calgary</strong><small>Local &amp; proud</small></span></div>
+<div><b>◇</b><span><strong>Durable materials</strong><small>PLA &amp; PETG</small></span></div>
+<div><b>▣</b><span><strong>Fast turnaround</strong><small>Usually 1–3 days</small></span></div>
+<div><b>✓</b><span><strong>Made to order</strong><small>Built for you</small></span></div>
+</div>
+</div>
+<div class="hero-media reveal">
+<img alt="A real D3DPS dual phone holder carrying two phones while playing Pokémon GO" src="assets/hero-dual-phone-holder.webp"/>
+<div class="hero-shade"></div>
+<div class="hero-label"><span>Featured product</span><strong>Dual Phone Holder</strong></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="category-title" class="category-strip section-tight">
+<div class="shell">
+<div class="section-top">
+<div><p class="eyebrow">Browse the collection</p><h2 id="category-title">Shop by category</h2></div>
+<a href="#products">View all products →</a>
+</div>
+<div class="category-grid">
+<a class="category-card" data-jump-filter="pokemon-go" href="#products"><span class="category-icon">◉</span><span><strong>Pokémon GO</strong><small>Phone holders &amp; accessories</small></span><b>→</b></a>
+<a class="category-card" data-jump-filter="organization" href="#products"><span class="category-icon">▦</span><span><strong>Organization</strong><small>Storage, trays &amp; displays</small></span><b>→</b></a>
+<a class="category-card" data-jump-filter="gaming" href="#products"><span class="category-icon">⌘</span><span><strong>Gaming</strong><small>Controller &amp; desk gear</small></span><b>→</b></a>
+<a class="category-card" data-jump-filter="cards" href="#products"><span class="category-icon">▤</span><span><strong>Card Collecting</strong><small>Sorting, slabs &amp; packs</small></span><b>→</b></a>
+<a class="category-card" href="#custom"><span class="category-icon">＋</span><span><strong>Custom Prints</strong><small>Your idea, made real</small></span><b>→</b></a>
+</div>
+</div>
+</section>
+<section class="section products-section" id="products">
+<div class="shell">
+<div class="section-top products-heading">
+<div><p class="eyebrow">Featured products</p><h2>Useful prints people actually want to use.</h2></div>
+<p>Search, filter, save favourites, or build an inquiry list. Product images can be swapped later without changing the layout.</p>
+</div>
+<div class="catalog-tools">
+<label class="catalog-search"><span>Search products</span><input id="product-search" placeholder="Try “phone”, “cards”, or “gaming”" type="search"/></label>
+<div aria-label="Product categories" class="filters" role="group">
+<button class="filter active" data-filter="all" type="button">All</button>
+<button class="filter" data-filter="pokemon-go" type="button">Pokémon GO</button>
+<button class="filter" data-filter="cards" type="button">Cards</button>
+<button class="filter" data-filter="gaming" type="button">Gaming</button>
+<button class="filter" data-filter="organization" type="button">Organization</button>
+<button class="filter" data-filter="custom" type="button">Custom</button>
+<button class="filter" data-filter="favorites" type="button">Favourites</button>
+</div>
+</div>
+<div class="product-grid" id="product-grid"><p class="products-loading" id="products-loading">Loading products…</p></div>
+<p class="no-results" hidden="" id="no-results">No products match that search yet. A custom print may still be possible.</p>
+</div>
+</section>
+<section class="section media-section">
+<div class="shell">
+<div class="section-top">
+<div><p class="eyebrow">Your photo gallery</p><h2>Built to showcase your best work.</h2></div>
+<p>These are intentional photo slots. Replace each placeholder later with the exact images you choose.</p>
+</div>
+<div class="masonry-grid">
+<div class="photo-slot tall"><span>Hero product lifestyle photo</span><small>Suggested: portrait or vertical image</small></div>
+<div class="photo-slot"><span>Best seller close-up</span><small>Suggested: clean product photo</small></div>
+<div class="photo-slot"><span>Colour options</span><small>Suggested: several prints together</small></div>
+<div class="photo-slot wide"><span>Workspace or printing process</span><small>Suggested: printer, filament, or workbench</small></div>
+<div class="photo-slot"><span>Customer setup</span><small>Suggested: product being used</small></div>
+</div>
+</div>
+</section>
+<section class="section custom-section" id="custom">
+<div class="shell custom-grid">
+<div class="custom-copy">
+<p class="eyebrow">Custom 3D printing</p>
+<h2>Bring the idea. We’ll work out the print.</h2>
+<p>Send a photo, sketch, measurement, existing STL, or a simple explanation. D3DPS can adapt an existing model or develop a practical solution around your use case.</p>
+<ul class="check-list"><li>Colour and size adjustments</li><li>Personalized names or labels</li><li>Replacement parts and organizers</li><li>Small-batch business orders</li><li>PLA and PETG material options</li><li>One small design revision included</li></ul>
+<a class="button primary" href="#contact">Request a Custom Quote →</a>
+</div>
+<div class="custom-visual">
+<div class="custom-photo-slot"><span>＋</span><strong>Add a custom-project photo</strong><small>Use a before/after, prototype, or customer idea</small></div>
+<div class="custom-card"><p class="kicker">Not sure it can be printed?</p><h3>Send the idea anyway.</h3><p>The first step is understanding the size, purpose, strength, material, timeline, and best way to make it.</p><div class="chip-row"><span>STL</span><span>3MF</span><span>STEP</span><span>Photos</span><span>Sketches</span></div></div>
+</div>
+</div>
+</section>
+<section class="section process-section" id="process">
+<div class="shell">
+<div class="section-top"><div><p class="eyebrow">How ordering works</p><h2>Simple from idea to pickup.</h2></div></div>
+<div class="steps-grid">
+<article><span>01</span><h3>Send your idea</h3><p>Share what you want, how it will be used, and any sizing details or photos.</p></article>
+<article><span>02</span><h3>Approve the plan</h3><p>Confirm the design, colour, material, estimated timeline, and price.</p></article>
+<article><span>03</span><h3>We print it</h3><p>Your item is made to order and checked before it leaves the printer.</p></article>
+<article><span>04</span><h3>Pickup or delivery</h3><p>Arrange Calgary pickup, delivery, or shipping when available.</p></article>
+</div>
+</div>
+</section>
+<section class="section about-section" id="about">
+<div class="shell about-grid">
+<div class="about-logo"><img alt="D3DPS logo" src="assets/d3dps-logo.webp"/></div>
+<div><p class="eyebrow">About D3DPS</p><h2>Practical products without the mass-produced feel.</h2><p>Established in 2022, D3DPS is a Calgary-based 3D printing business focused on useful, affordable products. Every order receives small-business attention, whether it is one accessory, a personalized gift, a storage solution, or a larger batch.</p><p>The goal is simple: make useful things that solve everyday problems and look good doing it.</p><div class="social-row"><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" rel="noopener" target="_blank">Facebook</a><a href="https://www.instagram.com/d3dps" rel="noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@d3dps" rel="noopener" target="_blank">TikTok</a><a href="https://youtube.com/@d3dps" rel="noopener" target="_blank">YouTube</a></div></div>
+</div>
+</section>
+<section class="section reviews-section">
+<div class="shell">
+<div class="section-top"><div><p class="eyebrow">Customer feedback</p><h2>Ready for real reviews.</h2></div><p>No fake testimonials have been added. Replace these placeholders with genuine customer feedback whenever you are ready.</p></div>
+<div class="reviews-grid"><article><span>★★★★★</span><p>“Add a real customer review here.”</p><small>Customer name · Product</small></article><article><span>★★★★★</span><p>“Add another verified review here.”</p><small>Customer name · Custom order</small></article><article><span>★★★★★</span><p>“Use feedback from Facebook, Etsy, or a local order.”</p><small>Customer name · Calgary</small></article></div>
+</div>
+</section>
+<section class="section faq-section" id="faq">
+<div class="shell faq-grid">
+<div><p class="eyebrow">Frequently asked questions</p><h2>Everything customers usually ask first.</h2><p>Clear answers help people feel confident before they reach out.</p></div>
+<div class="faq-list">
+<details><summary>How long does an order take?</summary><p>Most regular orders are ready in approximately 1–3 business days. Larger batches, new custom designs, and long prints may take around five business days or longer depending on complexity.</p></details>
+<details><summary>What materials do you print with?</summary><p>Most items are printed in PLA. PETG can be recommended for products needing more heat resistance or durability.</p></details>
+<details><summary>Can I choose the colour?</summary><p>Yes, subject to available filament. Multiple colours or special finishes may affect price and production time.</p></details>
+<details><summary>Can you design something from scratch?</summary><p>Possibly. Send measurements, photos, sketches, and a clear description. Design and prototyping work may have an additional cost.</p></details>
+<details><summary>Do you ship?</summary><p>Local Calgary pickup is the simplest option. Delivery or shipping can be discussed, with any added cost confirmed before production.</p></details>
+<details><summary>Can I return a custom item?</summary><p>Because items are made to order, returns are generally not accepted. Production errors should be reported so they can be addressed.</p></details>
+</div>
+</div>
+</section>
+<section class="section contact-section" id="contact">
+<div class="shell contact-grid">
+<div class="contact-copy"><p class="eyebrow">Get a quote</p><h2>Tell us what you want printed.</h2><p>Include the item, approximate size, preferred colour, quantity, intended use, and any photos or files you already have.</p><div class="contact-links"><a href="mailto:D3DPSYYC@gmail.com"><span>Email</span><strong>D3DPSYYC@gmail.com</strong></a><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" rel="noopener" target="_blank"><span>Messenger</span><strong>Message D3DPS</strong></a><a href="https://www.instagram.com/d3dps" rel="noopener" target="_blank"><span>Instagram</span><strong>@d3dps</strong></a></div></div>
+<form class="contact-form" id="quote-form">
+<div class="field-row"><label>Name<input autocomplete="name" id="name" name="name" required=""/></label><label>Email or phone<input id="contact-info" name="contact" required=""/></label></div>
+<label>Product or category<select id="quote-category" name="category"><option>Custom print</option><option>Pokémon GO accessory</option><option>Card collecting product</option><option>Gaming or desk accessory</option><option>Organization or travel item</option><option>Small-batch order</option></select></label>
+<label>Project details<textarea id="details" name="details" placeholder="Describe the item, size, colour, quantity, and intended use." required="" rows="6"></textarea></label>
+<button class="button primary full" type="submit">Create Email Request →</button>
+<p class="form-note">This opens your email app with the details filled in. Attach photos or files before sending.</p>
+</form>
+</div>
+</section>
+</main>
+<a class="floating-contact" href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" rel="noopener" target="_blank">Message D3DPS</a>
+<footer class="site-footer">
+<div class="shell footer-grid">
+<div class="footer-brand"><img alt="D3DPS" src="assets/d3dps-logo.webp"/><p>Practical 3D printing, designed and made in Calgary.</p></div>
+<div><strong>Explore</strong><a href="#products">Products</a><a href="#custom">Custom orders</a><a href="#process">How it works</a><a href="#faq">FAQ</a></div>
+<div><strong>Connect</strong><a href="mailto:D3DPSYYC@gmail.com">D3DPSYYC@gmail.com</a><a href="https://www.facebook.com/share/1Rhco5eney/?mibextid=wwXIfr" rel="noopener" target="_blank">Facebook</a><a href="https://www.instagram.com/d3dps" rel="noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@d3dps" rel="noopener" target="_blank">TikTok</a><a href="https://youtube.com/@d3dps" rel="noopener" target="_blank">YouTube</a></div>
+</div>
+<div class="shell footer-bottom"><span>© <span id="year"></span> D3DPS</span><span>Established 2022 · Calgary, Alberta</span></div>
+</footer>
+<script src="script.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user && window.location.hash.includes("invite_token")) {
+      window.netlifyIdentity.open("signup");
+    }
+  });
+}
+</script></body>
 </html>

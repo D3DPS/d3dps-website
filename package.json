@@ -1,0 +1,7 @@
+{
+  "name": "d3dps-website",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-content.js"
+  }
+}

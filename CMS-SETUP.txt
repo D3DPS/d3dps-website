@@ -1,0 +1,41 @@
+D3DPS CMS — PHASE 1 SETUP
+===========================
+
+WHAT IS INCLUDED
+- /admin dashboard powered by Decap CMS
+- Editable product files in /content/products
+- Product image uploads to /assets/uploads
+- Automatic product-data build on Netlify
+- Existing favourites, search, filters, and inquiry list preserved
+- Homepage settings collection prepared for the next phase
+
+UPLOAD TO GITHUB
+1. Open github.com/D3DPS/d3dps-website
+2. Upload the CONTENTS of this folder to the repository root.
+3. Replace the existing files when GitHub asks.
+4. Commit to the main branch.
+5. Netlify should automatically run: npm run build
+
+ONE-TIME NETLIFY SETUP
+1. Open your D3DPS project in Netlify.
+2. Go to Integrations or Identity and enable Netlify Identity.
+3. Under Identity registration preferences, choose Invite only.
+4. Enable Git Gateway under Identity > Services.
+5. Invite your own email address as an Identity user.
+6. Accept the invitation from your email.
+7. Open https://d3dps.com/admin/
+
+IMPORTANT
+The CMS login will not work until Netlify Identity and Git Gateway are enabled.
+
+HOW PRODUCT EDITING WORKS
+- Open /admin
+- Choose Products
+- Edit or create a product
+- Press Publish
+- Decap saves the change to GitHub
+- Netlify rebuilds the website automatically
+
+CURRENT LIMITATION
+Homepage settings are editable in the dashboard, but the live homepage is not yet reading those settings.
+That connection is planned for Phase 2. Product editing is fully wired in Phase 1.

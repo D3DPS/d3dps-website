@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://d3dps.com"
+display_url: "https://d3dps.com"
+logo_url: "/assets/d3dps-logo.webp"
+
+collections:
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    folder: "content/products"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{fields.id}}"
+    summary: "{{fields.name}} — {{fields.price}}"
+    sortable_fields: ["order", "name", "category"]
+    fields:
+      - { label: "Product ID", name: "id", widget: "string", hint: "Lowercase letters and hyphens only, e.g. card-sorting-tray", pattern: ['^[a-z0-9-]+$', "Use lowercase letters, numbers, and hyphens only."] }
+      - { label: "Product name", name: "name", widget: "string" }
+      - { label: "Product type", name: "type", widget: "string", hint: "Small label above the product name." }
+      - { label: "Categories", name: "category", widget: "string", hint: "Use searchable words separated by spaces, such as: cards organization" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Product image", name: "image", widget: "image", required: false }
+      - { label: "Image description", name: "image_alt", widget: "string", required: false }
+      - { label: "Badge", name: "badge", widget: "string", required: false, hint: "Examples: Featured, New, Best Seller" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Display order", name: "order", widget: "number", value_type: "int", min: 1, default: 99 }
+
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/settings/site.json"
+        format: "json"
+        fields:
+          - { label: "Announcement bar", name: "announcement", widget: "string" }
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero title", name: "hero_title", widget: "string" }
+          - { label: "Hero title accent", name: "hero_title_accent", widget: "string" }
+          - { label: "Hero paragraph", name: "hero_text", widget: "text" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image label", name: "hero_label", widget: "string" }
+          - { label: "Contact email", name: "contact_email", widget: "string" }
