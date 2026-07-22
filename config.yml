@@ -1,0 +1,210 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://d3dps.com"
+display_url: "https://d3dps.com"
+logo_url: "/assets/d3dps-logo.webp"
+
+collections:
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    folder: "content/products"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{fields.id}}"
+    summary: "{{fields.name}} — {{fields.price}}"
+    sortable_fields: ["order", "name", "category"]
+    fields:
+      - { label: "Product ID", name: "id", widget: "string", hint: "Lowercase letters and hyphens only, e.g. card-sorting-tray", pattern: ['^[a-z0-9-]+$', "Use lowercase letters, numbers, and hyphens only."] }
+      - { label: "Product name", name: "name", widget: "string" }
+      - { label: "Product type", name: "type", widget: "string", hint: "Small label above the product name." }
+      - { label: "Categories", name: "category", widget: "string", hint: "Use searchable words separated by spaces, such as: cards organization" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Product image", name: "image", widget: "image", required: false }
+      - { label: "Image description", name: "image_alt", widget: "string", required: false }
+      - { label: "Badge", name: "badge", widget: "string", required: false, hint: "Examples: Featured, New, Best Seller" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Display order", name: "order", widget: "number", value_type: "int", min: 1, default: 99 }
+
+
+  - name: "filament"
+    label: "Filament Inventory"
+    label_singular: "Filament Spool"
+    folder: "content/filament"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{fields.brand}} {{fields.material}} — {{fields.colour}} — {{fields.remaining_weight_g}}g left"
+    sortable_fields: ["updated_date", "brand", "material", "colour", "remaining_weight_g", "status"]
+    fields:
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Material", name: "material", widget: "select", options: ["PLA", "PLA+", "PETG", "TPU", "ABS", "ASA", "Other"] }
+      - { label: "Colour", name: "colour", widget: "string" }
+      - { label: "Finish", name: "finish", widget: "select", options: ["Standard", "Matte", "Silk", "Metallic", "Galaxy", "Translucent", "Glow", "Other"], required: false }
+      - { label: "Starting weight (g)", name: "starting_weight_g", widget: "number", value_type: "int", min: 0, default: 1000 }
+      - { label: "Remaining weight (g)", name: "remaining_weight_g", widget: "number", value_type: "int", min: 0, default: 1000 }
+      - { label: "Cost ($)", name: "cost", widget: "number", value_type: "float", min: 0, required: false }
+      - { label: "Purchase date", name: "purchase_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Opened date", name: "opened_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Last updated", name: "updated_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Storage location", name: "storage_location", widget: "string", required: false }
+      - { label: "Status", name: "status", widget: "select", options: ["Sealed", "Open", "Low stock", "Empty", "Archived"], default: "Open" }
+      - { label: "Low-stock level (g)", name: "low_stock_level_g", widget: "number", value_type: "int", min: 0, default: 200 }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "print_queue"
+    label: "Print Queue"
+    label_singular: "Print Job"
+    folder: "content/print-queue"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.job_name}}"
+    summary: "{{fields.job_name}} — {{fields.status}} — Due {{fields.due_date}}"
+    sortable_fields: ["due_date", "status", "priority", "customer"]
+    fields:
+      - { label: "Job name", name: "job_name", widget: "string" }
+      - { label: "Customer", name: "customer", widget: "string", required: false }
+      - { label: "Product or design", name: "product", widget: "string" }
+      - { label: "Quantity", name: "quantity", widget: "number", value_type: "int", min: 1, default: 1 }
+      - { label: "Material", name: "material", widget: "select", options: ["PLA", "PLA+", "PETG", "TPU", "ABS", "ASA", "Other"], default: "PLA" }
+      - { label: "Colour", name: "colour", widget: "string" }
+      - { label: "Printer", name: "printer", widget: "select", options: ["Bambu X1C", "Bambu A1", "Other"], required: false }
+      - { label: "Estimated print time (hours)", name: "estimated_hours", widget: "number", value_type: "float", min: 0, required: false }
+      - { label: "Estimated filament (g)", name: "estimated_filament_g", widget: "number", value_type: "int", min: 0, required: false }
+      - { label: "Due date", name: "due_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Priority", name: "priority", widget: "select", options: ["Low", "Normal", "High", "Urgent"], default: "Normal" }
+      - { label: "Status", name: "status", widget: "select", options: ["Not started", "Printing", "Paused", "Post-processing", "Ready", "Completed", "Cancelled"], default: "Not started" }
+      - { label: "STL or file location", name: "file_location", widget: "string", required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "orders"
+    label: "Orders"
+    label_singular: "Order"
+    folder: "content/orders"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.customer}}"
+    summary: "{{fields.customer}} — ${{fields.total_price}} — {{fields.status}}"
+    sortable_fields: ["order_date", "due_date", "status", "customer", "total_price"]
+    fields:
+      - { label: "Customer", name: "customer", widget: "string" }
+      - { label: "Contact information", name: "contact", widget: "string", required: false }
+      - { label: "Order date", name: "order_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Due date", name: "due_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        summary: "{{fields.quantity}} × {{fields.product}}"
+        fields:
+          - { label: "Product", name: "product", widget: "string" }
+          - { label: "Quantity", name: "quantity", widget: "number", value_type: "int", min: 1, default: 1 }
+          - { label: "Colour", name: "colour", widget: "string", required: false }
+          - { label: "Unit price ($)", name: "unit_price", widget: "number", value_type: "float", min: 0, required: false }
+      - { label: "Total price ($)", name: "total_price", widget: "number", value_type: "float", min: 0 }
+      - { label: "Amount paid ($)", name: "amount_paid", widget: "number", value_type: "float", min: 0, default: 0 }
+      - { label: "Payment method", name: "payment_method", widget: "select", options: ["Cash", "E-transfer", "Card", "Other"], required: false }
+      - { label: "Fulfilment", name: "fulfilment", widget: "select", options: ["Calgary pickup", "Local delivery", "Shipping", "Other"], default: "Calgary pickup" }
+      - { label: "Status", name: "status", widget: "select", options: ["Quote", "Awaiting deposit", "Confirmed", "In production", "Ready", "Completed", "Cancelled"], default: "Quote" }
+      - { label: "Linked print job", name: "print_job", widget: "string", required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "customers"
+    label: "Customers"
+    label_singular: "Customer"
+    folder: "content/customers"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    summary: "{{fields.name}} — {{fields.contact}}"
+    sortable_fields: ["name", "last_order_date"]
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Contact information", name: "contact", widget: "string", required: false }
+      - { label: "Preferred contact method", name: "preferred_contact", widget: "select", options: ["Text", "Email", "Messenger", "Phone", "Other"], required: false }
+      - { label: "Last order date", name: "last_order_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "stl_library"
+    label: "STL Library"
+    label_singular: "STL Design"
+    folder: "content/stl-library"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    summary: "{{fields.design_name}} — {{fields.category}} — {{fields.license_status}}"
+    sortable_fields: ["design_name", "category", "designer", "license_status"]
+    fields:
+      - { label: "Design name", name: "design_name", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Designer or creator", name: "designer", widget: "string", required: false }
+      - { label: "Source link", name: "source_link", widget: "string", required: false }
+      - { label: "File location", name: "file_location", widget: "string", hint: "Example: Google Drive folder, local folder, or Bambu project name." }
+      - { label: "License status", name: "license_status", widget: "select", options: ["Commercial use allowed", "Personal use only", "Original D3DPS design", "Permission received", "Unknown"], default: "Unknown" }
+      - { label: "License or membership expiry", name: "license_expiry", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Recommended material", name: "material", widget: "string", required: false }
+      - { label: "Print profile", name: "print_profile", widget: "string", required: false }
+      - { label: "Estimated print time (hours)", name: "estimated_hours", widget: "number", value_type: "float", min: 0, required: false }
+      - { label: "Estimated filament (g)", name: "estimated_filament_g", widget: "number", value_type: "int", min: 0, required: false }
+      - { label: "Preview image", name: "preview_image", widget: "image", required: false }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "expenses"
+    label: "Expenses"
+    label_singular: "Expense"
+    folder: "content/expenses"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.description}}"
+    summary: "{{fields.purchase_date}} — {{fields.description}} — ${{fields.amount}}"
+    sortable_fields: ["purchase_date", "category", "amount", "vendor"]
+    fields:
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Filament", "Printer parts", "Tools", "Packaging", "Shipping", "Advertising", "Website", "Licensing", "Other"] }
+      - { label: "Amount ($)", name: "amount", widget: "number", value_type: "float", min: 0 }
+      - { label: "Purchase date", name: "purchase_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Vendor", name: "vendor", widget: "string", required: false }
+      - { label: "Payment method", name: "payment_method", widget: "select", options: ["Cash", "Debit", "Credit", "E-transfer", "Other"], required: false }
+      - { label: "Receipt", name: "receipt", widget: "file", required: false }
+      - { label: "Business percentage", name: "business_percentage", widget: "number", value_type: "int", min: 0, max: 100, default: 100 }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/settings/site.json"
+        format: "json"
+        fields:
+          - { label: "Announcement bar", name: "announcement", widget: "string" }
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero title", name: "hero_title", widget: "string" }
+          - { label: "Hero title accent", name: "hero_title_accent", widget: "string" }
+          - { label: "Hero paragraph", name: "hero_text", widget: "text" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image label", name: "hero_label", widget: "string" }
+          - { label: "Contact email", name: "contact_email", widget: "string" }
