@@ -1,0 +1,20 @@
+D3DPS CLEAN REPLACEMENT
+=======================
+
+This package replaces the previous D3DPS v2 upload.
+
+IMPORTANT:
+1. Extract this ZIP on your computer.
+2. Upload EVERYTHING INSIDE the extracted folder to the ROOT of your GitHub repository.
+3. Replace matching files when prompted.
+4. Confirm this exact file exists in GitHub:
+   netlify/functions/create-square-checkout.mjs
+5. Confirm admin/config.yml contains: online_purchase
+6. Commit changes and wait for Netlify to show Published.
+7. Refresh d3dps.com with Ctrl + F5 before testing.
+
+This version includes:
+- Correct admin product purchase fields
+- Correct nested Netlify function folder
+- Checkout calling /.netlify/functions/create-square-checkout
+- Better checkout error messages instead of Unexpected end of JSON input

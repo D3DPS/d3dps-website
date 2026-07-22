@@ -188,9 +188,25 @@ qs("#cart-checkout").addEventListener("click", async event => {
   if (!items.length) return;
   button.disabled = true; button.textContent = "Opening secure checkout…";
   try {
-    const response = await fetch("/api/create-square-checkout", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ items }) });
-    const result = await response.json();
-    if (!response.ok || !result.checkoutUrl) throw new Error(result.error || "Checkout could not be started.");
+    const response = await fetch("/.netlify/functions/create-square-checkout", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ items })
+    });
+
+    const responseText = await response.text();
+    let result = {};
+    if (responseText) {
+      try {
+        result = JSON.parse(responseText);
+      } catch {
+        throw new Error(`Checkout service returned an invalid response (${response.status}).`);
+      }
+    }
+
+    if (!response.ok || !result.checkoutUrl) {
+      throw new Error(result.error || `Checkout could not be started (${response.status}).`);
+    }
     window.location.href = result.checkoutUrl;
   } catch (error) {
     alert(error.message || "Checkout could not be started. Please try again.");
