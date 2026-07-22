@@ -1,0 +1,33 @@
+D3DPS Varying Prices + Manufacturing Costs
+
+WHAT THIS UPDATE ADDS
+- Fixed-price products
+- Package-based products with different prices
+- Quote-only products
+- Optional follow-up selection for a package (for example, which accessory)
+- Private manufacturing-cost fields for fixed products and every package
+- Server-side Square price verification
+
+FLEXI SKELETON KNIGHT
+A sample product is included with these packages:
+- Knight only: $10
+- Knight and sword: $15
+- Knight and one accessory: $15
+- Knight and all accessories: $30
+- Accessories only: $25
+
+Open Products > Flexi Skeleton Knight in /admin and replace the placeholder accessory names.
+Enter manufacturing costs inside each package. These costs are removed from data/products.json during the build, so customers cannot see them.
+
+IMPORTANT
+Upload all files and preserve the folders. In particular:
+- admin/config.yml
+- scripts/build-content.js
+- package.json
+- script.js
+- styles.css
+- index.html
+- netlify/functions/create-square-checkout.mjs
+- content/products/flexi-skeleton-knight.md
+
+After committing, wait for Netlify to publish. Then hard-refresh the website and /admin.

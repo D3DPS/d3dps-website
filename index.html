@@ -231,5 +231,18 @@ if (window.netlifyIdentity) {
     }
   });
 }
-</script></body>
+</script>
+<dialog class="product-configurator" id="product-configurator">
+  <div class="configurator-head">
+    <div><p class="eyebrow">Choose your package</p><h2 id="configurator-title">Product options</h2></div>
+    <button aria-label="Close options" class="close-button" id="configurator-cancel" type="button">×</button>
+  </div>
+  <div class="configurator-options" id="configurator-options"></div>
+  <label class="configurator-selection" id="configurator-selection-wrap" hidden>
+    <span id="configurator-selection-label">Choose an option</span>
+    <select id="configurator-selection"></select>
+  </label>
+  <div class="configurator-footer"><strong>Total: <span id="configurator-total">$0.00</span></strong><button class="button primary" id="configurator-add" type="button">Add to cart</button></div>
+</dialog>
+</body>
 </html>
