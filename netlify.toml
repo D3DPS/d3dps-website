@@ -5,7 +5,15 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[functions]
+  included_files = ["data/products.json"]
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"

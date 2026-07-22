@@ -1,0 +1,43 @@
+D3DPS 2.0 — SQUARE CHECKOUT + BUSINESS ADMIN
+================================================
+
+INCLUDED NOW
+- Shopping cart with quantities
+- Secure Square-hosted checkout
+- Server-side price validation
+- Product stock field
+- Online purchase toggle and CAD price
+- Decap CMS collections for:
+  * Products
+  * Filament inventory
+  * Print queue
+  * Orders
+  * Customers
+  * STL library
+  * Expenses
+
+UPLOAD
+1. Extract this ZIP.
+2. Upload all files and folders to the ROOT of the GitHub repository.
+3. Replace matching files when prompted.
+4. Confirm netlify/functions/create-square-checkout.mjs exists in GitHub.
+5. Wait for Netlify to deploy.
+
+NETLIFY VARIABLES
+- SQUARE_ACCESS_TOKEN (secret; Functions scope or All scopes)
+- SQUARE_LOCATION_ID (Functions scope or All scopes)
+
+PRODUCT SETUP
+In /admin, edit a product and set:
+- Online purchase enabled: ON
+- Online price (CAD): a number such as 20
+- Stock quantity: leave blank for made-to-order/unlimited, or enter a number
+
+IMPORTANT LIMITATION
+The Orders collection is currently for manual business tracking. Automatically copying paid Square orders into the CMS requires a Square webhook plus persistent database/storage. That should be implemented as a separate phase after checkout is confirmed working.
+
+TEST
+1. Enable online purchase for one low-cost product.
+2. Add it to the cart.
+3. Click Checkout securely with Square.
+4. Confirm Square opens and shows the correct product, quantity, and price.

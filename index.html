@@ -43,7 +43,7 @@
 <span aria-hidden="true">⌕</span>
 </label>
 <button aria-controls="cart-panel" aria-expanded="false" class="inquiry-button" id="cart-toggle" type="button">
-          Inquiry list <strong id="cart-count">0</strong>
+          Cart <strong id="cart-count">0</strong>
 </button>
 <button aria-label="Switch colour theme" class="theme-button" id="theme-toggle" type="button">◐</button>
 <button aria-controls="main-nav" aria-expanded="false" class="menu-button" id="menu-toggle" type="button">Menu</button>
@@ -59,14 +59,16 @@
 </nav>
 </div>
 </header>
-<aside aria-hidden="true" aria-label="Product inquiry list" class="cart-panel" id="cart-panel">
+<aside aria-hidden="true" aria-label="Shopping cart and inquiry list" class="cart-panel" id="cart-panel">
 <div class="cart-head">
-<div><p class="kicker">Quote builder</p><h2>Your inquiry list</h2></div>
+<div><p class="kicker">Cart & quote builder</p><h2>Your items</h2></div>
 <button aria-label="Close inquiry list" class="close-button" id="cart-close" type="button">×</button>
 </div>
-<p>Save multiple products here and send one combined quote request. No payment is taken online.</p>
+<p>Buy fixed-price products securely through Square, or email quote-only products in one combined request.</p>
 <div class="cart-items" id="cart-items"></div>
-<button class="button primary full" id="cart-email" type="button">Email this list</button>
+<button class="button primary full" hidden id="cart-checkout" type="button">Checkout securely with Square</button>
+<p class="form-note" id="cart-checkout-note">Products requiring a quote can still be sent by email.</p>
+<button class="button secondary full" id="cart-email" type="button">Email this list</button>
 <button class="text-button" id="cart-clear" type="button">Clear list</button>
 </aside>
 <div class="cart-scrim" hidden="" id="cart-scrim"></div>

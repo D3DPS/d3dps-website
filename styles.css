@@ -6,3 +6,18 @@ html[data-theme="light"]{--bg:#f5f3f8;--panel:#fff;--panel2:#eee9f4;--text:#1815
 @media(max-width:560px){.announcement-inner{justify-content:center}.announcement-inner>span:first-child{font-size:.72rem}.social-mini{display:none}.header-grid{grid-template-columns:105px 1fr}.brand img{width:100px;height:70px}.inquiry-button{font-size:.78rem;padding:0 10px}.theme-button{display:none}.hero-copy{padding-top:52px}.hero h1{font-size:3rem}.hero-media{min-height:430px}.hero-media img{object-position:center}.benefit-row{grid-template-columns:1fr 1fr}.category-grid,.product-grid{grid-template-columns:1fr}.section{padding:72px 0}.section-top{flex-direction:column;align-items:flex-start}.products-heading p{max-width:none}.check-list{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}.contact-form{padding:20px}.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column;gap:8px}.floating-contact{font-size:.8rem;padding:11px 14px}}
 
 .products-loading{grid-column:1/-1;text-align:center;color:var(--muted);padding:48px 20px;border:1px dashed var(--line);border-radius:18px}
+
+/* Cart and Square checkout */
+.online-badge { display:block; margin-top:.65rem; font-weight:700; color:var(--accent, #8b5cf6); }
+.cart-item { align-items:flex-start; gap:1rem; }
+.cart-item-copy { display:flex; flex-direction:column; gap:.2rem; min-width:0; }
+.cart-item-actions { display:flex; flex-direction:column; align-items:flex-end; gap:.45rem; }
+.checkout-status,.quote-status { width:max-content; border-radius:999px; padding:.18rem .48rem; font-size:.72rem; font-weight:800; }
+.checkout-status { background:rgba(34,197,94,.13); color:#15803d; }
+.quote-status { background:rgba(245,158,11,.14); color:#b45309; }
+.quantity-control { display:flex; align-items:center; gap:.55rem; border:1px solid var(--line); border-radius:999px; padding:.18rem; }
+.quantity-control button { width:1.8rem; height:1.8rem; border:0; border-radius:50%; cursor:pointer; background:var(--surface-2); color:inherit; font-size:1.1rem; }
+.quantity-control strong { min-width:1.2rem; text-align:center; }
+.remove-item { border:0; background:transparent; color:inherit; text-decoration:underline; cursor:pointer; font-size:.8rem; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+#cart-checkout[disabled] { opacity:.65; cursor:wait; }

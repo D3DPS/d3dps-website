@@ -1,0 +1,54 @@
+D3DPS SQUARE CHECKOUT SETUP
+===========================
+
+WHAT THIS UPDATE ADDS
+- Real shopping cart with quantities
+- Square-hosted secure checkout
+- Server-side price validation (customers cannot change prices in their browser)
+- Quote-only products can still be emailed
+- Product controls in /admin for Sell online, Online price (CAD), and Stock quantity
+- The expanded admin sections for filament, print queue, orders, customers, STL files, and expenses
+
+1. UPLOAD THIS ENTIRE PACKAGE TO GITHUB
+Replace the matching files and folders in the root of your d3dps-website repository.
+Keep all folders exactly as shown, especially netlify/functions.
+
+2. NETLIFY ENVIRONMENT VARIABLES
+These are separate variables, not one combined variable:
+
+SQUARE_ACCESS_TOKEN = your Square Production access token
+SQUARE_LOCATION_ID = your Square Production location ID
+
+SQUARE_APPLICATION_ID is not required for this Square-hosted checkout method.
+
+For SQUARE_ACCESS_TOKEN:
+- Mark it as secret.
+- Use a single value for all deploy contexts if Netlify permits it.
+- If the secret setting disables "same value", enter the same token separately for Production, Deploy Previews, and Branch Deploys, or use Production only while testing the live site.
+- Scope must include Functions when your Netlify plan shows scope controls.
+
+For SQUARE_LOCATION_ID:
+- It does not need to be secret, but marking it secret is harmless.
+- Scope must include Functions when available.
+
+After saving variables, trigger a new Netlify deploy.
+
+3. ENABLE A PRODUCT FOR CHECKOUT
+Go to https://d3dps.com/admin
+Open Products, choose a product, and set:
+- Sell online: ON
+- Online price (CAD): a fixed number, e.g. 10
+- Stock quantity: leave blank for made-to-order/unlimited, or enter the available quantity
+Save and publish.
+
+Products without Sell online enabled remain quote-only.
+
+4. TEST SAFELY
+First enable one inexpensive product and test adding it to the cart.
+Click Checkout securely with Square and confirm the Square page shows the correct item, quantity, and CAD price.
+You do not need to complete a real charge just to confirm the checkout page opens correctly.
+
+IMPORTANT
+- Never place your Square access token in GitHub, index.html, script.js, or admin/config.yml.
+- The token belongs only in Netlify Environment Variables.
+- This version uses Square's Production API. Use a Production access token and Production location ID for real payments.
