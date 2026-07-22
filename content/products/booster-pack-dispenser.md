@@ -10,6 +10,6 @@ image: ""
 image_alt: Booster Pack Dispenser
 badge: ""
 featured: false
-published: false
+published: true
 order: 2
 ---
